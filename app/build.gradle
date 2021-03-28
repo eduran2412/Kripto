@@ -27,7 +27,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
+    //retrofit ve rxjava nın son versiyonlarının kontrolü için
+      def retrofitVersion = '2.3.0'
+      def rxJavaVersion = '2.1.1'
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -36,5 +38,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //verileri otomatik bir şekilde string ,int e çevirmek ,parse etmek için
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaVersion"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 }
