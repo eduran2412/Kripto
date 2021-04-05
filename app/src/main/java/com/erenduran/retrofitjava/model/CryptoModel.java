@@ -1,4 +1,4 @@
-package com.erenduran.retrofitjava;
+package com.erenduran.retrofitjava.model;
 
 import com.google.gson.annotations.SerializedName;
 

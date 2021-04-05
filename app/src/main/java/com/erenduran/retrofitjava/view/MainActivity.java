@@ -1,8 +1,10 @@
-package com.erenduran.retrofitjava;
+package com.erenduran.retrofitjava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.erenduran.retrofitjava.R;
 
 public class MainActivity extends AppCompatActivity {
 
