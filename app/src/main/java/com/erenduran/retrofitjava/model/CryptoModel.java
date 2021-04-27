@@ -6,9 +6,9 @@ public class CryptoModel {
     //model oluşturuldu
     //@SerializedName() db içindeki ismi çekiyor
     @SerializedName("currency")
-    String currency;
+   public String currency;
     @SerializedName("price")
-    String price;
+   public String price;
 
 
 }
