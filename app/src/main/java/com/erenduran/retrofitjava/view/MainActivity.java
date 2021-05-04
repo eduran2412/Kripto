@@ -1,6 +1,7 @@
 package com.erenduran.retrofitjava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<CryptoModel> cryptoModels;
     private String BASE_URL = "https://api.nomics.com/v1/";
     Retrofit retrofit;
+    RecyclerView recyclerView;
 
 
     @Override
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
          // api oluşturuldu
         //https://api.nomics.com/v1/prices?key=09b342bbcce01a8f095f65ba8f174f2a
 
+        recyclerView =findViewById(R.id.recyclerView);
         // Retrofit & json
         Gson gson = new GsonBuilder().setLenient().create();
 
