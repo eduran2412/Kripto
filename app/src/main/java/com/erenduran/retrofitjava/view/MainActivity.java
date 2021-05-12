@@ -1,11 +1,13 @@
 package com.erenduran.retrofitjava.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import com.erenduran.retrofitjava.R;
+import com.erenduran.retrofitjava.adapter.RecyclerViewAdapter;
 import com.erenduran.retrofitjava.model.CryptoModel;
 import com.erenduran.retrofitjava.service.CryptoAPI;
 import com.google.gson.Gson;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private String BASE_URL = "https://api.nomics.com/v1/";
     Retrofit retrofit;
     RecyclerView recyclerView;
+    RecyclerViewAdapter recyclerViewAdapter;
 
 
     @Override
@@ -62,10 +65,15 @@ public class MainActivity extends AppCompatActivity {
                     List<CryptoModel> responseList = response.body();
                     cryptoModels = new ArrayList<>(responseList);
 
-                    for (CryptoModel cryptoModel : cryptoModels){
+                    // RecyclerView
+                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                    recyclerViewAdapter = new RecyclerViewAdapter(cryptoModels);
+                    recyclerView.setAdapter(recyclerViewAdapter);
+
+                   /* for (CryptoModel cryptoModel : cryptoModels){
                         System.out.println(cryptoModel.currency);
                         System.out.println(cryptoModel.price);
-                    }
+                    } */
                 }
             }
 

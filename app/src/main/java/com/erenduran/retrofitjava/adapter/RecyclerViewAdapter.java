@@ -14,12 +14,12 @@ import com.erenduran.retrofitjava.model.CryptoModel;
 
 import java.util.ArrayList;
 
-public class RecyclerVievAdapter extends RecyclerView.Adapter<RecyclerVievAdapter.RowHolder> {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RowHolder> {
 
     private ArrayList<CryptoModel> cryptoList;
     private String[] colors={"#a3ff00","#ff00aa","#b4a7d6","#a4c2f4","#8ee5ee","#cd950c","#ee3b3b","#f47932"};
 
-    public RecyclerVievAdapter(ArrayList<CryptoModel> cryptoList) {
+    public RecyclerViewAdapter(ArrayList<CryptoModel> cryptoList) {
         this.cryptoList = cryptoList;
     }
 
